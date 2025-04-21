@@ -6,7 +6,7 @@ CreateThread(function()
     Wait(5000)
 
     -- Tjek for opdateringer
-    PerformHttpRequest('https://api.github.com/repos/TWA-Coding/twa-loading/releases/latest', function(statusCode, response, headers)
+    PerformHttpRequest('https://api.github.com/repos/TWA-Scripts/twa-loading//releases/latest', function(statusCode, response, headers)
         if statusCode == 200 then
             local data = json.decode(response)
             if data.tag_name and data.tag_name ~= currentVersion then
